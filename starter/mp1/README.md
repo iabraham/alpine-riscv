@@ -1,7 +1,8 @@
 # Introduction to RISC-V 
 
-In the tradition of programmers everywhere, we will start by printing out
-"Hello World!\n" to the console and then dive into what is going on behind the scenes. 
+In the tradition of programmers everywhere, we will stared by printing out
+"Hello World!\n" to the console. Now we accept keyboard input and echo 
+it back to the user.  
 
 
 
