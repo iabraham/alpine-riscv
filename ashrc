@@ -1,0 +1,4 @@
+alias spike="spike --isa=RV32IMAFDC"
+alias riscv-gcc="/opt/riscv/bin/riscv32-unknown-linux-gnu-gcc"
+alias riscv-as="/opt/riscv/bin/riscv32-unknown-linux-gnu-as"
+alias riscv-ld="/opt/riscv/bin/riscv32-unknown-linux-gnu-ld"
