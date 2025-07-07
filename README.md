@@ -35,9 +35,9 @@ Currently, `linux/arm64` and `linux/amd64` targets are supported. In other words
    ```
    Apptainer> cp /root/* ./workspace/
    ```
-   should copy over the starter files to the newly made directory `workspace` (root will be read-only in a singularity container).  
+   should copy over the starter files to the newly made directory `workspace` (root will be read-only in a singularity container). Note that within the `Apptainer>` prompt, `/root/` should be accessible (can `cd` into it for example). 
 
-   **NOTE:** I have a feeling the ~2GB .sif file will cause out of memory/space issues on most users EWS home drives.
+   **REMARK:** I have a feeling the ~2GB .sif file will cause out of memory/space issues on most users EWS home drives.
    Maybe we just put this in `/class/`?
 
 ### Verifying "things work"
