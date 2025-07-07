@@ -7,7 +7,7 @@ In the tradition of programmers everywhere, we will start by printing out
 TODO: 
 
  1. Explain Makefile syntax 
- 1. Explain two files `as-hello`, `c-hello`. 
- 1  Explain sections of ELF 
+ 1. Explain two files `as-hello`, `c-hello`
+ 1. Explain sections of ELF 
  1. Explain `ecalls` similar to LC3 `TRAP`
  1. Explain `write` and standard file handlers. 
