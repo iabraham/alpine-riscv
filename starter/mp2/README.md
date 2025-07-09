@@ -1,16 +1,11 @@
-# Subroutines in RISC-V
+# WASD Exercise 
 
-TASK -- Built a generic simple calculator in RISC-V assembly. 
+In this exercise, the objective is to print to console an asterisk that can be
+moved by the user using the `w`,`a`,`s`,`d` keys which quits when the user
+presses `q`. 
 
-Allowed usage: Only libc via `call`
+See the gold file in action by running `./run_gold.sh`.
 
-
-Explain: 
-
- 1. Difference between `ecall` and `call`
- 1. Explain stack layout, frame pointers, calling convention in RISC-V 
- 1. Introduce `ret`, `sp`, `jal`
-
-TODO:
-
- 1. Make calculator specs/requirements for students to do -- similar to MP2. 
+The `_clear` and `_exit` functions are provided for you. You will need to write
+the `_poll_user` and `_print_star` subroutines along with any necessary logic
+or additional subroutines.
