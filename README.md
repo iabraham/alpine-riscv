@@ -3,9 +3,54 @@
 This repository is WIP for some simple RISC-V assignments that can be co-opted
 to ECE 220 as an Honors Project. 
 
-## Build and run 
+## Pull from Dockerhub (new, WIP, see verified steps below first)
 
-First, how to run and build this Docker image. This is a time consuming
+Built images are now hosted on Dockerhub, though this is a bit of a work in progress. 
+You can find the image here: [https://hub.docker.com/r/itsabraham/alpine-riscv](https://hub.docker.com/r/itsabraham/alpine-riscv).
+Currently, `linux/arm64` and `linux/amd64` targets are supported. In other words, 
+
+ - I have run the following command(s) succsefully on my Mac:
+   
+   ```
+   docker pull itsabraham/alpine-riscv:v0.1
+   ```
+   followed by:
+   
+   ```
+   docker run -it -v ./workspace/:/root/workspace/ itsabraham/alpine-riscv:v0.1
+   ```
+   and verified things work.
+   
+ - I (should, but have not) run the following commands on UIUC's EWS Linux:
+   
+   ```
+   apptainer build alpine-riscv.sif docker://itsabraham/alpine-riscv:v0.1
+   ```
+   to build a Singularity/Apptainer image file `alpine-riscv.sif` followed by:
+   ```
+   mkdir workspace && apptainer shell alpine-riscv.sif
+   ```
+   to launch a shell within the container that maps/binds the current directory by default.
+   Then from **_within the shell_** (see changed prompt),
+   ```
+   Apptainer> cp /root/* ./workspace/
+   ```
+   should copy over the starter files to the newly made directory `workspace` (root will be read-only in a singularity container). Note that within the `Apptainer>` prompt, `/root/` should be accessible (can `cd` into it for example). 
+
+   **REMARK:** I have a feeling the ~2GB .sif file will cause out of memory/space issues on most users EWS home drives.
+   Maybe we just put this in `/class/`?
+
+### Verifying "things work"
+For either the EWS build or the local build below, the final step is to go into the `MP0` folder and run `make`. 
+If succesful, we should be able display the usual hello world as follows from the `MP0` directory. 
+
+```
+Apptainer> spike ../pk as-hello
+```
+
+## Local build and run (verified)
+
+Second, how to run and build this Docker image, _locally_. This is a time consuming
 process admittedly. On my 2022 MacBook Air M2 with 24 GB RAM, it took about 30
 minutes. 
 
