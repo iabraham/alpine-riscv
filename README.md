@@ -108,9 +108,19 @@ Error: cannot execute 32-bit program on RV64 hart
 ```
 so we must build `pk` again with the flag `rv32ic_zicsr_zifencei` (not just
 `rv32imac`).This is required to ensure cross-compatibility between `spike` and
-`pk`. 
+`pk`. The fourth `RUN` command builds `pk`. 
 
-The rest of the Docker file is for housekeeping and the like. 
+```
+RUN git clone https://github.com/riscv-software-src/riscv-pk.git \
+    && cd riscv-pk \
+    && mkdir build && cd build \
+    && ../configure --prefix=${RISCV} --with-arch=rv32ic_zicsr_zifencei --host=riscv32-unknown-linux-gnu \
+    && make -j$(nproc) \
+    && make install
+```
+
+The rest of the Docker file is for housekeeping and the like (mainly to reduce
+the size of the final image.) 
 
 ### Shell in Alpine Linux 
 
