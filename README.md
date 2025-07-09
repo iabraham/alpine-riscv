@@ -12,19 +12,19 @@ Currently, `linux/arm64` and `linux/amd64` targets are supported. In other words
  - I have run the following command(s) succsefully on my Mac:
    
    ```
-   docker pull itsabraham/alpine-riscv:v0.1
+   docker pull itsabraham/alpine-riscv:v0.2
    ```
    followed by:
    
    ```
-   docker run -it -v ./workspace/:/root/workspace/ itsabraham/alpine-riscv:v0.1
+   docker run -it -v ./workspace/:/root/workspace/ itsabraham/alpine-riscv:v0.2
    ```
    and verified things work.
    
  - I (should, but have not) run the following commands on UIUC's EWS Linux:
    
    ```
-   apptainer build alpine-riscv.sif docker://itsabraham/alpine-riscv:v0.1
+   apptainer build alpine-riscv.sif docker://itsabraham/alpine-riscv:v0.2
    ```
    to build a Singularity/Apptainer image file `alpine-riscv.sif` followed by:
    ```
