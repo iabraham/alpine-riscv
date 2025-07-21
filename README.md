@@ -41,7 +41,10 @@ Currently, `linux/arm64` and `linux/amd64` targets are supported. In other words
    Maybe we just put this in `/class/`?
 
 ### Verifying "things work"
-For either the EWS build or the local build below, the final step is to go into the `MP0` folder and run `make`. 
+For either the EWS build or the local build below, the final step is to go into the `MP0` folder and run 
+```
+make as-hello
+```
 If succesful, we should be able display the usual hello world as follows from the `MP0` directory. 
 
 ```
