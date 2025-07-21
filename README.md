@@ -33,7 +33,7 @@ Currently, `linux/arm64` and `linux/amd64` targets are supported. In other words
    to launch a shell within the container that maps/binds the current directory by default.
    Then from **_within the shell_** (see changed prompt),
    ```
-   Apptainer> cp /root/* ./workspace/
+   Apptainer> cp -r /root/* ./workspace/
    ```
    should copy over the starter files to the newly made directory `workspace` (root will be read-only in a singularity container). Note that within the `Apptainer>` prompt, `/root/` should be accessible (can `cd` into it for example). 
 
